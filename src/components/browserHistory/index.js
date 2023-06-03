@@ -3,7 +3,7 @@ import './index.css'
 import HistoryItem from '../deleteItems'
 
 class BrowserHistory extends Component {
-  state = {searchInput: '', list: [this.props]}
+  state = {searchInput: '', list: this.props}
 
   onSearch = event => {
     const searchValue = event.target.value
@@ -13,15 +13,20 @@ class BrowserHistory extends Component {
 
   onDeleteMain = id => {
     // const {onDeletethis} = this.props
+    const {list} = this.state
 
     // console.log(browserHistoryList)
     console.log(`Delete of item will done having id ${id}`)
     // this.setState({ids: id})
     // onDeletethis(id)
+    const browserHistoryList = list.browserHistoryList.filter(
+      each => each.id !== id,
+    )
+    this.setState({list: {browserHistoryList}})
   }
 
   render() {
-    const {browserHistoryList} = this.props
+    // const {browserHistoryList} = this.props
 
     // console.log(browserHistoryList)
 
@@ -44,7 +49,7 @@ class BrowserHistory extends Component {
       each.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
 
-    const titleList = browserHistoryList.find(each =>
+    const titleList = list.browserHistoryList.find(each =>
       each.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
 

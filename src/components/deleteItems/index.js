@@ -2,7 +2,7 @@ import './index.css'
 
 const HistoryItem = props => {
   const {item, onDeleteMain} = props
-  console.log(item)
+  // console.log(item)
 
   const onDeleteItem = () => {
     // console.log(`delete triggered for ${item.id}`)
