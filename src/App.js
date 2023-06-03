@@ -78,18 +78,16 @@ const initialHistoryList = [
 
 // let lst = {listItems: initialHistoryList}
 // Replace your code here
-const App = () => {
+const App = () => (
   //   const onDeleteApp = id => {
   //     console.log(id)
   //     lst.listItems = initialHistoryList.filter(each => each.id !== id)
   //     console.log(`listItems : - ${lst.listItems}`)
   //   }
-  console.log(initialHistoryList)
-  return (
-    <div>
-      <BrowserHistory browserHistoryList={initialHistoryList} />
-    </div>
-  )
-}
+  // console.log(initialHistoryList)
+  <div>
+    <BrowserHistory browserHistoryList={initialHistoryList} />
+  </div>
+)
 
 export default App
