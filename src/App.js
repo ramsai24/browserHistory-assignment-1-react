@@ -1,5 +1,5 @@
 import './App.css'
-
+import BrowserHistory from './components/browserHistory'
 // These are the list used in the application. You can move them to any component needed.
 const initialHistoryList = [
   {
@@ -76,7 +76,20 @@ const initialHistoryList = [
   },
 ]
 
+// let lst = {listItems: initialHistoryList}
 // Replace your code here
-const App = () => <div>Hello World</div>
+const App = () => {
+  //   const onDeleteApp = id => {
+  //     console.log(id)
+  //     lst.listItems = initialHistoryList.filter(each => each.id !== id)
+  //     console.log(`listItems : - ${lst.listItems}`)
+  //   }
+  console.log(initialHistoryList)
+  return (
+    <div>
+      <BrowserHistory browserHistoryList={initialHistoryList} />
+    </div>
+  )
+}
 
 export default App
