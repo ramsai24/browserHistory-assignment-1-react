@@ -1,4 +1,16 @@
 .historyItem {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.url-title-delete-container {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  flex-grow: 1;
+}
+
+.history-item {
+  display: flex;
 }

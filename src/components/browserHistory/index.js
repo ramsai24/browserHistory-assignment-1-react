@@ -56,19 +56,27 @@ class BrowserHistory extends Component {
     // console.log(`titleList :- ${titleList}`)
 
     return (
-      <div>
-        <div>
+      <div className="app-container">
+        <div className="bg-container">
           <div className="header-section">
             <img
+              className="history-logo"
               src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png"
               alt="app logo"
             />
             <div className="search-container">
               <img
+                className="search-logo"
                 src="https://assets.ccbp.in/frontend/react-js/search-img.png"
                 alt="search"
               />
-              <input type="search" onChange={this.onSearch} />
+              <input
+                className="inputEl"
+                type="search"
+                onChange={this.onSearch}
+                placeholder="Search history"
+                value={searchInput}
+              />
             </div>
           </div>
           <div className="bottom-section">
@@ -88,7 +96,7 @@ class BrowserHistory extends Component {
               return <p>There is no history to show</p>
             })} */}
             {titleList ? (
-              <ul>
+              <ul className="lists-container">
                 {searchResult.map(each => (
                   <HistoryItem
                     item={each}
@@ -98,7 +106,7 @@ class BrowserHistory extends Component {
                 ))}
               </ul>
             ) : (
-              <p>There is no history to show</p>
+              <p className="no-history">There is no history to show</p>
             )}
 
             {/* <ul>
