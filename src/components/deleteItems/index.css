@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  margin-top: 15px;
 }
 
 .url-title-delete-container {
@@ -11,6 +12,79 @@
   flex-grow: 1;
 }
 
+@media screen and (max-width: 567px) {
+  .historyItem {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .history-item {
   display: flex;
+}
+.url-container {
+  display: flex;
+  padding-left: 35px;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-logo {
+  height: 25px;
+  width: 25px;
+  margin-right: 30px;
+}
+
+.title-url-container {
+  display: flex;
+}
+
+@media screen and (max-width: 567px) {
+  .title-url-container {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid blue; */
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+.title {
+  margin-right: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  /* border: 1px solid yellow; */
+}
+
+.url {
+  color: #64748b;
+  font-weight: 400;
+  /* border: 1px solid green; */
+}
+
+@media screen and (max-width: 567px) {
+  .title {
+    margin: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    font-size: 16px;
+    font-weight: 500;
+    /* border: 1px solid yellow; */
+    flex-grow: 1;
+  }
+
+  .url {
+    color: #64748b;
+    font-weight: 400;
+    /* border: 1px solid green; */
+    margin-top: 0px;
+    margin-left: 0px;
+    flex-grow: 1;
+  }
+}
+
+.deletebtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
